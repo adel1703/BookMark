@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/1486503746-book-learning-bookmark-ribbon-education-mark-school_81290.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    
+        <div class="container py-2 viewport">
+            <div class="bghover">
+            <h1 class="fw-bold  text-center mt-5">Bookmarker</h1>
+            </div>
+            <div class=" mt-5  borderstyle bookmark-body w-100 py-4  d-flex flex-column gap-3">
+                <div class="pt-3 d-flex justify-content-center align-items-center head2">
+
+                    <i class="fa fa-bookmark me-2 fs-4 text-success"></i>
+                    <h2 class="fs-4"> Bookmark your favorite sites </h2>
+                    <i class="fa fa-bookmark ms-2 fs-4 text-success"></i>
+
+                </div>
+
+                <div>
+                    <div class="fw-bold mt-3 site-name w-100 d-flex flex-column gap-2">
+                        <label for="bookmarkName" > 
+                            <i class="fa fa-book-bookmark"> </i>
+                            Site Name 
+                        </label>
+                        <input type="text" placeholder="Bookmark Name" class=" form-control sitename" onkeyup="formValid()" id="bookmarkName">
+                    </div>
+                    <div class="fw-bold mt-4 mb-4 site-url w-100 d-flex flex-column gap-2">
+                        <label for="bookmarkURL">
+                            <i class="fa fa-link"> </i>
+                            Site URL 
+                        </label>    
+                        <input id="bookmarkURL" type="url" placeholder="Website URL" onkeyup="formValid()" class="form-control sitename ">
+                    </div>      
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-submit btn-danger px-5 me-3 d-block" onclick="addNewSite()" id="submitBtn">Submit</button>
+                        <button id="updateBtn" onclick="update()" class="btn btn-submit btn-warning px-5 d-none me-3">Update</button>
+                        <button class="btn btn-submit btn-secondary px-5 d-block " onclick="clearInputs()" id="submitBtn">Clear</button>
+                    </div >
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container bg-white ">
+
+            <table class="table mt-4 text-center ">
+
+                <thead>
+                    <tr class="fw-bold">
+                        <td>Index</td>
+                        <td>Website Name</td>
+                        <td>Visit</td>
+                        <td>Update</td>
+                        <td>Delete</td>
+                        
+                    </tr>
+
+                </thead>
+
+                <tbody id="tbody">
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"> </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
